@@ -6,16 +6,20 @@ Wins = 0
 Losses = 0
 Money = 50
 player = False
+
+def output(Ties, Wins, Losses, Money):
+    print("You tied with computer!")
+    print("ties: " + str(Ties))
+    print("wins: " + str(Wins))
+    print("losses: " + str(Losses))
+    print("You have $" + str(Money))
+
 while player == False and Money > 0:
     player = input("Rock, Paper, Scissors?")
     if player == computer:
         Ties += 1
         Money == Money
-        print("You tied with computer!")
-        print("ties: " + str(Ties))
-        print("wins: " + str(Wins))
-        print("losses: " + str(Losses))
-        print("You have $" + str(Money))
+        output(Ties, Wins, Losses, Money)
         play = input("Play again? Y or N")
         if play == "N":
             break
@@ -26,10 +30,7 @@ while player == False and Money > 0:
             print("Computer beat you!", computer, "covers", player)
             Losses += 1
             Money -= 10
-            print("ties: " + str(Ties))
-            print("wins: " + str(Wins))
-            print("losses: " + str(Losses))
-            print("You have $" + str(Money))
+            output(Ties, Wins, Losses, Money)
             play = input("Play again? Y or N")
             if play == "N":
                 break
@@ -39,10 +40,7 @@ while player == False and Money > 0:
             print("You beat computer!", player, "smashes", computer)
             Wins += 1
             Money += 10
-            print("ties: " + str(Ties))
-            print("wins: " + str(Wins))
-            print("losses: " + str(Losses))
-            print("You have $" + str(Money))
+            output(Ties, Wins, Losses, Money)
             play = input("Play again? Y or N")
             if play == "N":
                 break
@@ -53,10 +51,7 @@ while player == False and Money > 0:
             print("Computer beat you!", computer, "cut", player)
             Losses += 1
             Money -= 10
-            print("ties: " + str(Ties))
-            print("wins: " + str(Wins))
-            print("losses: " + str(Losses))
-            print("You have $" + str(Money))
+            output(Ties, Wins, Losses, Money)
             play = input("Play again? Y or N")
             if play == "N":
                 break
@@ -66,10 +61,7 @@ while player == False and Money > 0:
             print("You beat computer!", player, "covers", computer)
             Wins += 1
             Money += 10
-            print("ties: " + str(Ties))
-            print("wins: " + str(Wins))
-            print("losses: " + str(Losses))
-            print("You have $" + str(Money))
+            output(Ties, Wins, Losses, Money)
             play = input("Play again? Y or N")
             if play == "N":
                 break
@@ -80,10 +72,7 @@ while player == False and Money > 0:
             print("Computer beat you!", computer, "smashes", player)
             Losses += 1
             Money -= 10
-            print("ties: " + str(Ties))
-            print("wins: " + str(Wins))
-            print("losses: " + str(Losses))
-            print("You have $" + str(Money))
+            output(Ties, Wins, Losses, Money)
             play = input("Play again? Y or N")
             if play == "N":
                 break
@@ -93,10 +82,7 @@ while player == False and Money > 0:
             print("You beat computer!", player, "cut", computer)
             Wins += 1
             Money += 10
-            print("ties: " + str(Ties))
-            print("wins: " + str(Wins))
-            print("losses: " + str(Losses))
-            print("You have $" + str(Money))
+            output(Ties, Wins, Losses, Money)
             play = input("Play again? Y or N")
             if play == "N":
                 break
